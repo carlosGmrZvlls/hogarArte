@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rentout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterDepActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:onClick="pushBotton"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/save_button">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/depart_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="imagen de un departamento"
+                    android:scaleType="centerCrop"
+                    android:src="@android:drawable/ic_menu_camera" />
+
+                <EditText
+                    android:id="@+id/adress_name_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/depart_image"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/depart_image"
+                    android:hint="@string/adress"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/area_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/depart_image"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/depart_image"
+                    android:hint="@string/area"
+                    android:inputType="textPersonName" />
+                    
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/depart_image"
+                    android:layout_marginTop="16dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/description_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="26dp"
+                    android:gravity="center"
+                    android:text="@string/description"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/description_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/description_title"
+                    android:layout_marginTop="8dp"
+                    android:hint="@string/text_description"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/amount_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/description_edit"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="36dp"
+                    android:text="@string/amount"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/amount_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/amount_title"
+                    android:layout_marginTop="8dp"
+                    android:hint="@string/text_amount"
+                    android:inputType="textPersonName" />
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
